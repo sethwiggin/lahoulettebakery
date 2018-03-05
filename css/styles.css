@@ -1,0 +1,724 @@
+/*=============================================
+=            Reset            =
+=============================================*/
+
+/*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img,
+embed,
+iframe,
+object,
+audio,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+
+/*=====  End of Reset  ======*/
+
+/*=============================================
+=            Global            =
+=============================================*/
+
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Vollkorn, Georgia, serif;
+  font-weight: 400;
+  color: #000;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.contain {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 1.5rem;
+}
+
+.highlight {
+  color: #777;
+}
+
+.smaller {
+  font-size: 80%;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: #b00;
+}
+
+.alt-link {
+  color: #777;
+  font-style: italic;
+}
+
+::selection {
+  background: #b00;
+  color: #fff;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 600;
+}
+
+@media screen and (min-width: 50em) {
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+/*=====  End of Global  ======*/
+
+/*=============================================
+=            Header            =
+=============================================*/
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 65px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0 1px 15px -1px rgba(0, 0, 0, 0.1);
+}
+
+.header .contain {
+  display: flex;
+}
+
+.main-nav {
+  margin-left: auto;
+  color: #ccc;
+}
+
+.logo {
+  display: block;
+  width: 24px;
+  height: 30px;
+  margin-top: 18px;
+  font-size: 1.3rem;
+  background-image: url(../img/logo.png);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: 0 2px;
+  text-indent: -9999em;
+  white-space: nowrap;
+}
+
+.logo:hover {
+  color: #777;
+}
+
+.nav-link {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 21px 0 16px;
+  font-size: 1rem;
+  font-style: italic;
+  transition: color 0.3s linear;
+}
+
+.nav-link:first-child {
+  margin-left: 0;
+}
+
+.nav-link:last-child {
+  margin-right: 0;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #000;
+  border-bottom: 4px solid #b00;
+}
+
+/* Larger Screens */
+
+@media screen and (min-width: 40em) {
+  .logo {
+    width: auto;
+    padding-left: 32px;
+    text-indent: 0;
+  }
+
+  .nav-link {
+    margin: 0 1rem;
+    padding: 21px 0 12px;
+    font-size: 1.2rem;
+  }
+}
+
+/*=====  End of Header  ======*/
+
+/*=============================================
+=            Section            =
+=============================================*/
+
+.products,
+.locations,
+.about,
+.contact {
+  padding-top: 3rem;
+  padding-bottom: 3em;
+}
+
+.section {
+  position: relative;
+}
+
+.intro:after,
+.products:after,
+.locations:after,
+.about:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.section-description {
+  font-size: 1.2rem;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  line-height: 1;
+  font-weight: 600;
+  margin: 0 0 3rem;
+}
+
+.section-title:first-letter {
+  border-bottom: 4px solid #b00;
+}
+
+/* Large */
+
+@media screen and (min-width: 50em) {
+  .products,
+  .locations,
+  .about,
+  .contact {
+    padding-top: 4rem;
+    padding-bottom: 4em;
+  }
+
+  .section-title-wrap {
+    display: flex;
+  }
+
+  .section-description {
+    margin-left: auto;
+    max-width: 540px;
+    font-size: 1.2rem;
+    text-align: right;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    margin: 0 0 4rem;
+    height: 70px;
+  }
+}
+
+/*=====  End of Sections  ======*/
+
+/*=============================================
+=            Intro            =
+=============================================*/
+
+.intro {
+  padding-top: 7.5rem;
+  padding-bottom: 4rem;
+}
+
+.intro-title {
+  font-size: 2.2rem;
+  line-height: 1.3;
+  margin-bottom: 0.75em;
+}
+
+.intro-title .asterisk {
+  margin-left: -0.75rem;
+  font-size: 1rem;
+}
+
+.intro-title .asterisk a {
+  color: #ccc;
+}
+
+.intro-title .asterisk a:hover {
+  color: #b00;
+}
+
+.footnote {
+  color: #999;
+}
+
+/* Large */
+
+@media screen and (min-width: 50em) {
+  .intro-title {
+    font-size: 3.4rem;
+    line-height: 1.3;
+    margin-bottom: 0.75em;
+  }
+
+  .intro-title .asterisk {
+    margin-left: -1.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+/*=====  End of Intro  ======*/
+
+/*=============================================
+=            Products            =
+=============================================*/
+
+.product {
+  position: relative;
+  padding: 2em 0;
+}
+
+.product:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.product:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+
+.product:last-child:after {
+  display: none;
+}
+
+.product-img {
+  text-align: center;
+}
+
+.product-img img {
+  max-width: 340px;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+  color: #777;
+}
+
+.product-price {
+  font-style: italic;
+  font-size: 28px;
+}
+
+/* Large */
+
+@media screen and (min-width: 50em) {
+  .product {
+    display: flex;
+  }
+
+  .product-content {
+    max-width: 600px;
+  }
+
+  .product-description {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+  }
+
+  .product-img {
+    max-width: 340px;
+    margin-left: auto;
+  }
+}
+
+/*=====  End of Products  ======*/
+
+/*=============================================
+=            Locations            =
+=============================================*/
+
+.location-item {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+}
+
+.location-item:last-child {
+  padding-bottom: 0;
+}
+
+.location-item:last-child:before {
+  display: none;
+}
+
+.location-item:before {
+  position: absolute;
+  content: "";
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  height: 1px;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+.location-item:after {
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+/* Location Content */
+
+.location-title {
+  font-size: 1.7rem;
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.location-title a {
+  color: #000;
+}
+
+.location {
+  font-size: 1.3rem;
+  line-height: 1.3;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  color: #777;
+}
+
+.location-detail {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 0.1em;
+}
+
+.location-note {
+  margin-top: 1rem;
+}
+
+.location-link {
+  color: #b00;
+}
+
+.location-link::after {
+  content: " \00BB";
+}
+
+/* Large */
+
+@media screen and (min-width: 50em) {
+  .section-title-wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .location-wrap {
+    display: flex;
+    position: relative;
+  }
+
+  .location-wrap:before {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    left: 49.9%;
+    right: 0;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(172, 172, 172, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(172, 172, 172, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(172, 172, 172, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  .location-section {
+    flex: 1;
+  }
+
+  .location-section:first-child {
+    padding-right: 3em;
+  }
+
+  .location-section:last-child {
+    padding-left: 3em;
+  }
+}
+
+/*=====  End of Locations  ======*/
+
+/*=============================================
+=            Contact            =
+=============================================*/
+
+.contact {
+  min-height: 600px;
+}
+
+.contact-title {
+  font-size: 2rem;
+  margin: 0 0 1em;
+  font-style: italic;
+  color: #777;
+}
+
+.contact-item {
+  margin-bottom: 0.5em;
+  font-size: 1.7rem;
+}
+
+/* Large */
+
+@media screen and (min-width: 50em) {
+  .contact-info-wrap {
+    display: flex;
+  }
+
+  .contact-info {
+    flex: 1;
+  }
+
+  .contact-logo-img {
+    margin-top: -6rem;
+    max-width: 300px;
+    margin-left: auto;
+  }
+}
+
+/*=====  End of Contact  ======*/
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+.footer {
+  padding: 1.2em 0;
+  position: relative;
+}
+
+.footer .contain {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-info {
+  color: #777;
+}
+
+.footer-top-link a {
+  color: #777;
+}
+
+.footer:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  display: block;
+  height: 1px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  background: -moz-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(172, 172, 172, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}

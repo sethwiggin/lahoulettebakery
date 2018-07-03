@@ -637,7 +637,7 @@ strong {
 }
 
 .contact-title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 0 0 1em;
   font-style: italic;
   color: #777;
@@ -645,7 +645,7 @@ strong {
 
 .contact-item {
   margin-bottom: 0.5em;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 
 /* Large */
@@ -657,6 +657,14 @@ strong {
 
   .contact-info {
     flex: 1;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-item {
+    font-size: 1.7rem;
   }
 
   .contact-logo-img {

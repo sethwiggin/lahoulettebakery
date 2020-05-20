@@ -563,11 +563,17 @@ strong {
 
 .location-link {
   color: #b00;
+  font-weight: bold;
+
 }
 
-.location-link::after {
-  content: " \00BB";
+.location-link:hover {
+ text-decoration: underline;
 }
+
+/* .location-link::after {
+  content: " \00BB";
+} */
 
 /* Large */
 
